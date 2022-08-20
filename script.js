@@ -3,6 +3,7 @@ const operatorBtn = document.querySelectorAll(".operator");
 const screen = document.querySelector(".screen");
 const equalsBtn = document.querySelector(".button-equals");
 const allClearBtn = document.querySelector(".all-clear");
+const clearBtn = document.querySelector(".clear");
 
 let firstValue = 0;
 let chosenOperator = "";
@@ -23,6 +24,13 @@ numberBtn.forEach((btn) => {
 
 // All Clear Button
 allClearBtn.addEventListener("click", allClear);
+clearBtn.addEventListener("click", () => {
+  if (!screen.textContent) {
+    console.log("Empty sadly");
+  } else {
+    screen.textContent = screen.textContent.slice(0, screen.textContent.length - 1);
+  }
+});
 
 function allClear() {
   screen.textContent = "";
