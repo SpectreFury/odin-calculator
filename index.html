@@ -1,14 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Calculator</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <header>
+      <h1>Calculator</h1>
+    </header>
+    <section class="calculator-container">
+      <div class="container-inner">
+        <div class="screen"></div>
+        <div class="operator-container">
+          <button type="button" class="add">
+            <i class="fa-solid fa-plus fa-3x"></i>
+          </button>
+          <button type="button" class="subtract">
+            <i class="fa-solid fa-minus fa-3x"></i>
+          </button>
+          <button type="button" class="multiply">
+            <i class="fa-solid fa-divide fa-3x"></i>
+          </button>
+          <button type="button" class="divide">
+            <i class="fa-solid fa-multiply fa-3x"></i>
+          </button>
+        </div>
+        <div class="number-container-1">
+          <button type="button" class="number">
+            <i class="fa-solid fa-7 fa-3x"></i>
+          </button>
+          <button type="button" class="number">
+            <i class="fa-solid fa-8 fa-3x"></i>
+          </button>
+          <button type="button" class="number">
+            <i class="fa-solid fa-9 fa-3x"></i>
+          </button>
+          <button type="button" class="number">
+            <i class="fa-solid fa-greater-than fa-3x"></i>
+          </button>
+        </div>
+        <div class="number-container-2">
+          <button type="button" class="number">
+            <i class="fa-solid fa-4 fa-3x"></i>
+          </button>
+          <button type="button" class="number">
+            <i class="fa-solid fa-5 fa-3x"></i>
+          </button>
+          <button type="button" class="number">
+            <i class="fa-solid fa-6 fa-3x"></i>
+          </button>
+          <button type="button" class="number">
+            <i class="fa-solid fa-square-root-variable fa-3x"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- <footer>
+      <div class="legal-text">Made by SpectreFury with ❤️</div>
+    </footer> -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
