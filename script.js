@@ -7,6 +7,7 @@ let firstValue = 0;
 let chosenOperator = "";
 let secondValue = 0;
 let result = 0;
+let clickedIsEquals = false;
 
 // Adds numbers to the display
 numberBtn.forEach((btn) => {
@@ -17,6 +18,7 @@ numberBtn.forEach((btn) => {
 
 operatorBtn.forEach((operator) => {
   operator.addEventListener("click", () => {
+    clickedIsEquals = false;
     if (operator.classList.contains("add")) {
       if (result) {
         firstValue = result;
@@ -62,9 +64,13 @@ operatorBtn.forEach((operator) => {
 });
 
 equalsBtn.addEventListener("click", () => {
+  if (clickedIsEquals) {
+    return;
+  }
   secondValue = +screen.textContent;
   result = operator(firstValue, secondValue, chosenOperator);
   screen.textContent = result;
+  clickedIsEquals = true;
 });
 
 // Functions for arithmatic operations
