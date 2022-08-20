@@ -2,6 +2,7 @@ const numberBtn = document.querySelectorAll(".number");
 const operatorBtn = document.querySelectorAll(".operator");
 const screen = document.querySelector(".screen");
 const equalsBtn = document.querySelector(".button-equals");
+const allClearBtn = document.querySelector(".all-clear");
 
 let firstValue = 0;
 let chosenOperator = "";
@@ -14,6 +15,15 @@ numberBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     screen.textContent += btn.value;
   });
+});
+
+// All Clear Button
+allClearBtn.addEventListener("click", () => {
+  screen.textContent = "";
+  firstValue = 0;
+  secondValue = 0;
+  result = 0;
+  chosenOperator = "";
 });
 
 operatorBtn.forEach((operator) => {
