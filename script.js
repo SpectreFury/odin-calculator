@@ -1,3 +1,73 @@
+const numberBtn = document.querySelectorAll(".number");
+const operatorBtn = document.querySelectorAll(".operator");
+const screen = document.querySelector(".screen");
+const equalsBtn = document.querySelector(".button-equals");
+
+let firstValue = 0;
+let chosenOperator = "";
+let secondValue = 0;
+let result = 0;
+
+// Adds numbers to the display
+numberBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    screen.textContent += btn.value;
+  });
+});
+
+operatorBtn.forEach((operator) => {
+  operator.addEventListener("click", () => {
+    if (operator.classList.contains("add")) {
+      if (result) {
+        firstValue = result;
+        chosenOperator = "+";
+        screen.textContent = "";
+      } else {
+        firstValue = +screen.textContent;
+        chosenOperator = "+";
+        screen.textContent = "";
+      }
+    } else if (operator.classList.contains("subtract")) {
+      if (result) {
+        firstValue = result;
+        chosenOperator = "-";
+        screen.textContent = "";
+      } else {
+        firstValue = +screen.textContent;
+        chosenOperator = "-";
+        screen.textContent = "";
+      }
+    } else if (operator.classList.contains("multiply")) {
+      if (result) {
+        firstValue = result;
+        chosenOperator = "*";
+        screen.textContent = "";
+      } else {
+        firstValue = +screen.textContent;
+        chosenOperator = "*";
+        screen.textContent = "";
+      }
+    } else {
+      if (result) {
+        firstValue = result;
+        chosenOperator = "/";
+        screen.textContent = "";
+      } else {
+        firstValue = +screen.textContent;
+        chosenOperator = "/";
+        screen.textContent = "";
+      }
+    }
+  });
+});
+
+equalsBtn.addEventListener("click", () => {
+  secondValue = +screen.textContent;
+  result = operator(firstValue, secondValue, chosenOperator);
+  screen.textContent = result;
+});
+
+// Functions for arithmatic operations
 function add(a, b) {
   return a + b;
 }
