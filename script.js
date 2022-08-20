@@ -13,18 +13,24 @@ let clickedIsEquals = false;
 // Adds numbers to the display
 numberBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
+    if (clickedIsEquals) {
+      allClear();
+      clickedIsEquals = false;
+    }
     screen.textContent += btn.value;
   });
 });
 
 // All Clear Button
-allClearBtn.addEventListener("click", () => {
+allClearBtn.addEventListener("click", allClear);
+
+function allClear() {
   screen.textContent = "";
   firstValue = 0;
   secondValue = 0;
   result = 0;
   chosenOperator = "";
-});
+}
 
 operatorBtn.forEach((operator) => {
   operator.addEventListener("click", () => {
