@@ -104,6 +104,11 @@ header h1 {
   border: none;
 }
 
+button:hover {
+  opacity: 0.7;
+  
+}
+
 .number-container-1 button i,
 .number-container-2 button i,
 .number-container-3 button i,
@@ -169,8 +174,22 @@ footer .legal-text {
   color: #d7dadc;
   font-size: 1.3rem;
   font-style: italic;
+}
 
+.screen {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 15px;
+  font-size: 40px;
+  font-weight: bold;
+}
 
+.number-container-2 button:last-child,
+.number-container-1 button:last-child {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
 }
 
 
