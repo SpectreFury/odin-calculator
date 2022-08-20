@@ -34,6 +34,7 @@ header h1 {
 }
 
 .calculator-container .container-inner {
+  position: relative;
   max-width: 640px;
   margin: 0 auto;
   margin-top: 30px;
@@ -77,7 +78,8 @@ header h1 {
   color: white;
 }
 
-.number-container-1, .number-container-2 {
+.number-container-1,
+.number-container-2 {
   max-width: 540px;
   width: 90%;
   margin: 0 auto;
@@ -87,7 +89,11 @@ header h1 {
   align-items: center;
 }
 
-.number-container-1 button, .number-container-2 button{
+.number-container-1 button,
+.number-container-2 button,
+.number-container-3 button,
+.number-container-4 button,
+.equals button {
   width: 100px;
   height: 80px;
   background: #58595b;
@@ -97,11 +103,59 @@ header h1 {
   border: none;
 }
 
-.number-container-1 button i, .number-container-2 button i{
-    color: #fff;
+.number-container-1 button i,
+.number-container-2 button i,
+.number-container-3 button i,
+.number-container-4 button i,
+.equals button i {
+  color: #fff;
 }
 
 /* Quick Fix  */
-.number-container-1 button:last-child i{
-    transform: rotate(-90deg);
+.number-container-1 button:last-child i {
+  transform: rotate(-90deg);
 }
+
+.number-container-3 {
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.number-container-3 button {
+  margin-left: 43px;
+}
+
+.number-container-3 button:first-child {
+  margin-left: 0;
+}
+
+.number-container-4 {
+  position: relative;
+  max-width: 444px;
+  width: 90%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.number-container-4 button:first-child {
+  width: 247px;
+  margin-left: 50px;
+}
+
+.equals {
+  position: absolute;
+  right: 50px;
+  bottom: 15px;
+}
+
+.equals button {
+  height: 185px;
+  background-color: #f15a2b;
+}
+
+
+
+
+
