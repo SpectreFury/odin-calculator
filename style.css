@@ -26,6 +26,7 @@ header h1 {
   color: #d7dadc;
   font-size: 48px;
   font-weight: 700;
+  letter-spacing: 3px;
 }
 
 .calculator-container {
@@ -147,12 +148,29 @@ header h1 {
 .equals {
   position: absolute;
   right: 50px;
-  bottom: 15px;
+  bottom: 14px;
 }
 
 .equals button {
   height: 185px;
   background-color: #f15a2b;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .legal-text {
+  color: #d7dadc;
+  font-size: 1.3rem;
+  font-style: italic;
+
+
 }
 
 
