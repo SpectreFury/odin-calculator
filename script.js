@@ -4,6 +4,7 @@ const screen = document.querySelector(".screen");
 const equalsBtn = document.querySelector(".button-equals");
 const allClearBtn = document.querySelector(".all-clear");
 const clearBtn = document.querySelector(".clear");
+const periodBtn = document.querySelector(".period");
 
 let firstValue = 0;
 let chosenOperator = "";
@@ -16,6 +17,13 @@ const numberKeys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 const operationKeys = ["+", "-", "/", "*"];
 
 window.addEventListener("keydown", (e) => {
+  if (e.key === ".") {
+    if (screen.textContent.includes(".")) {
+      return;
+    }
+    screen.textContent += ".";
+  }
+
   if (e.key === "Backspace") {
     if (!screen.textContent) {
       console.log("Empty sadly");
@@ -77,6 +85,9 @@ window.addEventListener("keydown", (e) => {
 
   numberKeys.forEach((key) => {
     if (e.key === key) {
+      if (screen.textContent.length > 22) {
+        return;
+      }
       if (clickedIsEquals) {
         allClear();
         clickedIsEquals = false;
@@ -86,9 +97,20 @@ window.addEventListener("keydown", (e) => {
   });
 });
 
+//Period Btn
+periodBtn.addEventListener("click", () => {
+  if (screen.textContent.includes(".")) {
+    return;
+  }
+  screen.textContent += ".";
+});
+
 // Adds numbers to the display
 numberBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
+    if (screen.textContent.length > 22) {
+      return;
+    }
     if (clickedIsEquals) {
       allClear();
       clickedIsEquals = false;
